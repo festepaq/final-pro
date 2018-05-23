@@ -7,6 +7,7 @@ package laboratorio2.logica;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -22,6 +23,13 @@ public class Logica {
         }else{
             inventario.createNewFile();
         }
+    }
+    public void SobreEscribir(Supermercado s) throws IOException{
+        FileWriter fl = new FileWriter(inventario);
+        for(Producto p : s.getInventario()){
+            fl.write(p.getCodigo()+":"+p.getPrecio()+":"+p.getCantidad()+":"+ p.getDisponible() +":"+p.getNombre()+":"+"\n");
+        }
+        fl.close();
     }
     public void Lectura(Supermercado s)throws FileNotFoundException, IOException{
         Scanner sc = new Scanner(inventario).useLocale(Locale.US);
@@ -49,7 +57,8 @@ public class Logica {
             Producto p = new Producto(codigo, precio, cantidad,disponible, nombre);
             s.addProducto(p);
           sc.nextLine();
-          sc.close();
+          
         }
+        sc.close();
     }
 }

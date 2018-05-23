@@ -5,6 +5,8 @@
  */
 package laboratorio2.logica;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -43,6 +45,7 @@ public class Supermercado {
     }
     public void addProducto(Producto p){
         this.m_inventario.add(p);
+        
     }
     public void darInfoInventario(){
         for ( Producto p : this.m_inventario){

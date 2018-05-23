@@ -8,6 +8,7 @@ package laboratorio2;
 import java.io.IOException;
 import laboratorio2.logica.Caja;
 import laboratorio2.logica.Logica;
+import laboratorio2.logica.Producto;
 import laboratorio2.logica.Supermercado;
 
 /**
@@ -26,8 +27,8 @@ public class Laboratorio2 {
         l.crearInventario();
         l.Lectura(s);
         Caja caja = new Caja(s);
-        caja.registrarProducto(2018, 5);
-        caja.registrarProducto(1010, 6);
+        s.addProducto(new Producto(9650, 23.67, 56, 42, "carne"));
+        l.SobreEscribir(s);
         
     }
     

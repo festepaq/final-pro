@@ -24,5 +24,6 @@ public class Caja {
             this.m_sm.productoPorCodigo(codigo).setDisponible(this.m_sm.productoPorCodigo(codigo).getDisponible() - cantidad);
             
         }
+        
     }
 }
