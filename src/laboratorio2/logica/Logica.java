@@ -27,6 +27,7 @@ public class Logica {
         Scanner sc = new Scanner(inventario).useLocale(Locale.US);
         sc.useDelimiter(":");
         int cantidad = 0;
+        int disponible = 0;
         int codigo = 0;
         double precio = 0.0;
         String nombre = null;
@@ -41,11 +42,14 @@ public class Logica {
             if(sc.hasNextInt()){
                 cantidad = sc.nextInt();
             }
-            
+            if (sc.hasNextInt()){
+                disponible = sc.nextInt();
+            }
              nombre = sc.next();
-            Producto p = new Producto(codigo, precio, cantidad, nombre);
+            Producto p = new Producto(codigo, precio, cantidad,disponible, nombre);
             s.addProducto(p);
           sc.nextLine();
+          sc.close();
         }
     }
 }

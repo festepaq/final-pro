@@ -10,16 +10,25 @@ package laboratorio2.logica;
  * @author Parra G
  */
 public class Producto {
-    private int cantidad;
+    private int cantidad,disponible;
     private String nombre;
     private int codigo;
     private double precio;
 
-    public Producto( int codigo, double precio, int cantidad, String nombre) {
+    public Producto( int codigo, double precio, int cantidad,int disponible, String nombre) {
         this.precio = precio;
         this.cantidad = cantidad;
+        this.disponible = disponible;
         this.nombre = nombre;
         this.codigo = codigo;
+    }
+
+    public void setDisponible(int disponible) {
+        this.disponible = disponible;
+    }
+
+    public int getDisponible() {
+        return disponible;
     }
 
     public int getCantidad() {

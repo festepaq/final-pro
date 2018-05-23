@@ -14,7 +14,8 @@ import java.util.ArrayList;
 public class Supermercado {
     private String m_nombre, m_direccion;
     private ArrayList<Producto> m_inventario;
-
+    
+    
     public Supermercado(String nombre, String direccion) {
         this.m_nombre = nombre;
         this.m_direccion = direccion;
@@ -43,9 +44,19 @@ public class Supermercado {
     public void addProducto(Producto p){
         this.m_inventario.add(p);
     }
-    public void listarProductos(){
+    public void darInfoInventario(){
         for ( Producto p : this.m_inventario){
-            System.out.println("codigo :" + p.getCodigo() + " precio:" + " " + p.getPrecio() + " cantidad:" + " "+ p.getCantidad() + " nombre:" + " " + p.getNombre());
+            System.out.println("codigo :" + p.getCodigo() + " precio:" + " " + p.getPrecio() + " cantidad:" + " "+ p.getCantidad() +" disponible:"+" "+ p.getDisponible() + " nombre:" + " " + p.getNombre());
         }
+    }
+    public Producto productoPorCodigo(int codigo){
+        for ( Producto p : this.m_inventario){
+            if (p.getCodigo() == codigo){
+                return p;
+            }else{
+                //System.out.println("no se encuentra producto");
+            }
+        }
+        return null;
     }
 }
