@@ -9,6 +9,36 @@ package laboratorio2.logica;
  *
  * @author Parra G
  */
-public class Administrador {
+public class Administrador extends Persona {
+        
+    Administrador(String nombre,String direccion, int telefono){
+        this.m_nombre = nombre;
+        this.m_direccion = direccion;
+        this.m_telefono = telefono;
+    }
+
+    public String getM_nombre() {
+        return m_nombre;
+    }
+
+    public String getM_direccion() {
+        return m_direccion;
+    }
+
+    public int getM_telefono() {
+        return m_telefono;
+    }
+
+    public void setM_nombre(String m_nombre) {
+        this.m_nombre = m_nombre;
+    }
+
+    public void setM_direccion(String m_direccion) {
+        this.m_direccion = m_direccion;
+    }
+
+    public void setM_telefono(int m_telefono) {
+        this.m_telefono = m_telefono;
+    }
     
 }

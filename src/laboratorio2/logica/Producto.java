@@ -15,11 +15,11 @@ public class Producto {
     private int codigo;
     private double precio;
 
-    public Producto(int cantidad, String nombre, int codigo, double precio) {
+    public Producto( int codigo, double precio, int cantidad, String nombre) {
+        this.precio = precio;
         this.cantidad = cantidad;
         this.nombre = nombre;
         this.codigo = codigo;
-        this.precio = precio;
     }
 
     public int getCantidad() {

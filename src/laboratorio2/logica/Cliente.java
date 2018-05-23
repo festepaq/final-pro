@@ -9,7 +9,7 @@ package laboratorio2.logica;
  *
  * @author Parra G
  */
-public class Cliente extends Persona{
+public class Cliente extends Persona implements M_darInfo{
     
     Cliente(String nombre,String direccion, int telefono){
         this.m_nombre = nombre;
@@ -39,6 +39,11 @@ public class Cliente extends Persona{
 
     public void setM_telefono(int m_telefono) {
         this.m_telefono = m_telefono;
+    }
+
+    @Override
+    public void M_darInfo() {
+        System.out.println(this.getM_nombre() +" "+this.getM_telefono() + " " + this.getM_direccion());
     }
     
 }

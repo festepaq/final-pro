@@ -43,7 +43,7 @@ public class Vendedor extends Persona implements M_darInfo{
 
     @Override
     public void M_darInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(this.getM_nombre() +" "+this.getM_telefono() + " " + this.getM_direccion());
     }
     
 }
