@@ -21,6 +21,7 @@ public class Laboratorio2 {
     public static void main(String[] args) throws IOException {
         Supermercado s = new Supermercado("super", "asdas");
         Logica l =new Logica();
+        l.crearInventario();
         l.Lectura(s);
         s.listarProductos();
         

@@ -45,7 +45,7 @@ public class Supermercado {
     }
     public void listarProductos(){
         for ( Producto p : this.m_inventario){
-            System.out.println("codigo :" + p.getCodigo());
+            System.out.println("codigo :" + p.getCodigo() + " precio:" + " " + p.getPrecio() + " cantidad:" + " "+ p.getCantidad() + " nombre:" + " " + p.getNombre());
         }
     }
 }

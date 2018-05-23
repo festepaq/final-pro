@@ -8,6 +8,7 @@ package laboratorio2.logica;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Scanner;
 /**
  *
@@ -23,16 +24,28 @@ public class Logica {
         }
     }
     public void Lectura(Supermercado s)throws FileNotFoundException, IOException{
-        Scanner sc = new Scanner("inventario.txt");
+        Scanner sc = new Scanner(inventario).useLocale(Locale.US);
         sc.useDelimiter(":");
+        int cantidad = 0;
+        int codigo = 0;
+        double precio = 0.0;
+        String nombre = null;
         while(sc.hasNext()){
-            int codigo = sc.nextInt();
-            double precio = sc.nextDouble();
-            int cantidad = sc.nextInt();
-            String nombre = sc.next();
+            if(sc.hasNextInt()){
+                codigo = sc.nextInt();
+            }
+        
+            if(sc.hasNextDouble()){
+                precio = sc.nextDouble();
+            }
+            if(sc.hasNextInt()){
+                cantidad = sc.nextInt();
+            }
+            
+             nombre = sc.next();
             Producto p = new Producto(codigo, precio, cantidad, nombre);
             s.addProducto(p);
-            
+          sc.nextLine();
         }
     }
 }
