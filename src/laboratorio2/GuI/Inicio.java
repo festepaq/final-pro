@@ -44,7 +44,7 @@ public class Inicio extends Pane{
                 
                 Button admn = new Button("Administrador");
 		
-		vender.setOnAction(e -> ((Stage)(((Node) e.getSource()).getScene().getWindow())).setScene(new Scene(new Admn())));
+		admn.setOnAction(e -> ((Stage)(((Node) e.getSource()).getScene().getWindow())).setScene(new Scene(new Admn())));
 
 //		Button buttonDosJugadores = new MyButton("Dos Jugadores",200,320,300,100);
 //		buttonDosJugadores.getStyleClass().add("roundedButton");
@@ -53,7 +53,11 @@ public class Inicio extends Pane{
 //		buttonSalir.getStyleClass().add("roundedButton");
 //		buttonSalir.setOnAction(e-> ((Stage)(((Node) e.getSource()).getScene().getWindow())).close());
 		
-		this.getChildren().addAll(titulo,vender,admn);
+
+VBox v= new VBox();
+v.getChildren().add(vender);
+v.getChildren().add(admn);
+		this.getChildren().addAll(titulo,v);
                 
 		
 		

@@ -27,7 +27,8 @@ private Label titulo;
 	
 
     public Vender() {
-  super();       
+  super();   
+  
  this.setPrefSize(700, 800); 
 BorderPane borderPane= new BorderPane();
 Button b= new Button("Ok");

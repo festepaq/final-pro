@@ -25,21 +25,20 @@ import javafx.stage.Stage;
 public class Admn extends Pane {
     private Label titulo;
     public Admn(){
-        
+        super();
         this.setPrefSize(700, 800);
         titulo = new MyLabel("",100,50,500,100);
-        titulo.setAlignment(Pos.TOP_CENTER);
-        titulo.setId("Admin");
-        
+
         GridPane pane = new GridPane();
         pane.setAlignment(Pos.CENTER);
         pane.setPadding(new Insets(20, 30, 40, 50));
         pane.setHgap(5.5);
         pane.setVgap(5.5);
         
+        
         pane.add(new Label("Bienvenido Administrador"), 0, 5);
         
-        
+        this.getChildren().add(pane);
     }
             
     
